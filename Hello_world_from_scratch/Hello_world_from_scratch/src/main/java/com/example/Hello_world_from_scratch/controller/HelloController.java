@@ -14,7 +14,7 @@ public class HelloController {
     }
     @GetMapping("/world")
     public String hello2() {
-// // @GetMapping helps to run this method when someone visits When someone visits:localhost:8080/world
+// @GetMapping helps to run this method when someone visits When someone visits:localhost:8080/world
         return "World";
 
     }
