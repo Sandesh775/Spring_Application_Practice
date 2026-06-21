@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class StudentController {
     @PostMapping("/student")
     public String student(@RequestBody Student obj){
-        return "Received student : "+obj.getName()+"    age : "+obj.getAge();
+        return "Received student : "+obj.getName()+"    age : "+obj.getAge()+" years old ";
     }
 }
