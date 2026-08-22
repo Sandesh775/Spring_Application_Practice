@@ -1,5 +1,7 @@
 package com.example.DTO.Practice1.Controller;
 
+import com.example.DTO.Practice1.DTO.RequestDTO;
+import com.example.DTO.Practice1.DTO.ResponseDTO;
 import com.example.DTO.Practice1.Entity.Item;
 import com.example.DTO.Practice1.Service.Itemservice;
 import org.springframework.http.HttpStatus;
@@ -19,14 +21,14 @@ public class Itemcontroller {
     }
 
     @GetMapping
-    public ResponseEntity<List<Item>> getRequest(){
-        List<Item> list = itemservice.get();
+    public ResponseEntity<List<ResponseDTO>> getRequest(){
+        List<ResponseDTO> list = itemservice.get();
         return ResponseEntity.ok(list);
     }
 
     @PostMapping
-    public ResponseEntity<Item> postRequest(@RequestBody Item item){
-        Item savedItem = itemservice.post(item);
+    public ResponseEntity<ResponseDTO> postRequest(@RequestBody RequestDTO item){
+        ResponseDTO savedItem = itemservice.post(item);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedItem);
     }
 }

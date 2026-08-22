@@ -13,7 +13,7 @@ public class Item {
     private int id;
     private String title;
     private String description;
-    public Status;
+    public Status status;
     private LocalDate createdAt;
     private LocalDate updatedAt;
 
@@ -55,5 +55,13 @@ public class Item {
 
     public void setUpdatedAt(LocalDate updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }
