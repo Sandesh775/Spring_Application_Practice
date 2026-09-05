@@ -33,7 +33,12 @@ public class ProductService {
 
     public ProductResponseDTO createProduct(ProductRequestDTO dto){
 
+
         Product product = productMapper.toEntity(dto);
+
+        if(product.getStock() > 1000){
+            throw new ProductLimitException("Product stock limit exceeded.");
+        }
 
         Product savedProduct = productRepository.save(product);
 

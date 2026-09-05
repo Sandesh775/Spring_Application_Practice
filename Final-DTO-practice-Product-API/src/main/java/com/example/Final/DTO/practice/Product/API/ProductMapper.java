@@ -1,10 +1,12 @@
 package com.example.Final.DTO.practice.Product.API;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ProductMapper {
 
-    public ProductResponseDTO toResponse(Product p){
+    public ProductResponseDTO toResponse(Product p) {
         ProductResponseDTO responseDTO = new ProductResponseDTO();
 
         responseDTO.setId(p.getId());
@@ -14,18 +16,17 @@ public class ProductMapper {
         responseDTO.setAvailable(p.isAvailable());
         responseDTO.setCreatedAt(p.getCreatedAt());
 
-        return  responseDTO;
+        return responseDTO;
     }
 
-    public Product toEntity(ProductRequestDTO dto){
+    public Product toEntity(ProductRequestDTO dto) {
         Product p = new Product();
 
         p.setName(dto.getName());
         p.setPrice(dto.getPrice());
         p.setStock(dto.getStock());
-
-        p.setAvailable(p.getStock() > 0);
-        p.setCreatedAt(new LocalDate());
+        p.setAvailable(dto.getStock() > 0);
+        p.setCreatedAt(LocalDateTime.now());
 
         return p;
     }

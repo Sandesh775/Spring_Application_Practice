@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 @Entity
 public class Product {
@@ -14,7 +15,7 @@ public class Product {
     private double price;
     private int stock;
     private boolean isAvailable;
-    private Date createdAt;
+    private LocalDateTime createdAt;
 
     public long getId() {
         return id;
@@ -56,11 +57,11 @@ public class Product {
         isAvailable = available;
     }
 
-    public Date getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 }

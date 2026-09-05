@@ -1,5 +1,6 @@
 package com.example.Final.DTO.practice.Product.API;
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<ProductResponseDTO> createUser(@RequestBody ProductRequestDTO dto){
+    public ResponseEntity<ProductResponseDTO> createUser(@Valid @RequestBody ProductRequestDTO dto){
 
         ProductResponseDTO responseDTO = productService.createProduct(dto);
 

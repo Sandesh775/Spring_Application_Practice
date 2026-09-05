@@ -1,9 +1,18 @@
 package com.example.Final.DTO.practice.Product.API;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.PositiveOrZero;
+
 public class ProductRequestDTO {
 
+    @NotBlank
     private String name;
+
+    @Positive
     private double price;
+
+    @PositiveOrZero
     private int stock;
 
     public String getName() {

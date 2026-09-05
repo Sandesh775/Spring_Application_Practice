@@ -1,5 +1,6 @@
 package com.example.Final.DTO.practice.Product.API;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class ProductResponseDTO {
@@ -54,7 +55,7 @@ public class ProductResponseDTO {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 }
