@@ -1,13 +1,13 @@
-package com.example.User_Login_Authentication_With_JWT;
+package com.example.Login_Auth_DB;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserLoginAuthenticationWithJwtApplication {
+public class LoginAuthDbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserLoginAuthenticationWithJwtApplication.class, args);
+		SpringApplication.run(LoginAuthDbApplication.class, args);
 	}
 
 }
